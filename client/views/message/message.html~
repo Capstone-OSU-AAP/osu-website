@@ -1,0 +1,11 @@
+
+<template name="message">
+  <div class="container">
+        <!-- Page Content goes here -->
+
+
+    <h2>Your Messages</h2>
+    <p>Coming soon</p>
+   
+</div>
+</template>

@@ -1,0 +1,38 @@
+<template name="submissions_by_ee">
+  <h3></h3>
+  <div class="container">
+    {{#if currentUser}}
+      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Add Submission</a>
+    {{/if}}
+
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Add Submissions</h4>
+        <form class="submission-by">
+          <div class="row">
+            <div class="input-field col s6">
+              <textarea id="description" type="text" class="materialize-textarea description" name="text"></textarea>
+              <label for="description">Description</label>
+            </div>
+          </div>
+          <div class="row">
+              <input class="file-path validate file-url" type="text"/>
+              <button id="upload-file" class="btn">Upload</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn save">Save</a>
+      </div>
+    </div>
+    <table border="1">
+    <tbody>
+      {{#each submissionsByEe}}
+      <tr>
+        <td>{{description}}</td><td><a href="{{fileUrl}}">link</a></td><td><button id="deleteFileButton">delete</button></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  </div>
+</template>

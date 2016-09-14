@@ -1,0 +1,54 @@
+<template name="advancedSearch">
+  <div class="container">
+  <form class="col s12">
+    <div class="row">
+      {{#each selectedContactFields}}
+          {{#if options}}
+          <!-- <div class="input-field col s6">
+            {{> advancedSearchSelect options}}
+            <label>{{display_name}}</label>
+          </div> -->
+          {{else}}
+
+            <div class="input-field col s6">
+              <!-- <input id="input_{{name}}" type="text" class="validate"> -->
+              <!-- <label for="_id">{{display_name}}</label> -->
+              {{> reactiveTableFilter class=name id=_id label=display_name fields=reactiveSearchFields}}
+
+            </div>
+          {{/if}}
+      {{/each}}
+    </div>
+    <a class="btn modal-trigger" href="#fields">Edit Search Fields</a>
+  </form>
+  <br/>
+</div>
+<!-- Modal Trigger -->
+
+<!-- Modal Structure -->
+<div id="fields" class="modal modal-fixed-footer">
+  <div class="modal-content">
+    <h4>Edit Visible Fields</h4>
+    <div class="row">
+    {{#each availableContactFields}}
+      <div class="col s6 m6">
+        <input type="checkbox" checked="{{userSelectedSearchableOrDefault name default}}" class="toggle-checked" id="{{name}}"/>
+        <label for="{{name}}">{{display_name}}</label>
+      </div>
+    {{/each}}
+  </div>
+  </div>
+  <div class="modal-footer">
+    <a href="" class="modal-action modal-close btn-flat save_fields">Save</a>
+  </div>
+</div>
+</template>
+
+<template name="advancedSearchSelect">
+  <select>
+    <option value="" disabled selected>Select...</option>
+    {{#each this}}
+      <option value="{{this}}">{{this}}</option>
+    {{/each}}
+  </select>
+</template>

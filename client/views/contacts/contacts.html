@@ -1,0 +1,39 @@
+<template name="contacts">
+  <!-- <div class="background" style="background-image:url(staff.jpg)"> -->
+  <div class="background">
+      <h1>Contacts <span><a class='dropdown-button btn menu_button' data-beloworigin="true" href='#' data-activates='dropdown1'>Menu</a></span></h1>
+      <ul id='dropdown1' class='dropdown-content menu_button'>
+        <li><a href="#!">Bulk upload</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Add Contact</a></li>
+        <li class="divider"></li>
+        <li><a class="modal-trigger-save-search" href="#save">Save search query</a></li>
+        <li><a class="modal-trigger-open-search" href="#open">Open search query</a></li>
+      </ul>
+      {{> modal_save}}
+      {{> modal_open}}
+      <div class="contacts section">
+        {{> searchBox }}
+        {{> searchResult}}
+      </div>
+    </div>
+</template>
+
+<template name="searchBox">
+  <div class="searchBox">
+    <ul class="contacts collapsible" data-collapsible="accordion">
+      <li>
+        <div class="contacts collapsible-header active quickSearch">Quick Search</div>
+        <div class="contacts collapsible-body">
+          {{> quickSearch}}
+        </div>
+      </li>
+      <li>
+        <div class="contacts collapsible-header advancedSearch">Advanced Search</div>
+        <div class="contacts collapsible-body">
+          {{> advancedSearch}}
+        </div>
+      </li>
+    </ul>
+  </div>
+</template>

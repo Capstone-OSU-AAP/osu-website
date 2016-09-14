@@ -1,0 +1,26 @@
+<template name="searchResult">
+  <div class="buttons_menu">
+    <a class="btn modal-trigger-columns" href="#columns">Edit Columns</a>
+    <a class="btn gen-csv">Export</a>
+  </div>
+  {{> reactiveTable collection="contacts" settings=settings}}
+
+  <div id="columns" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Edit Visible Columns</h4>
+      <div class="row">
+      {{#each availableContactFields}}
+        <div class="col s6 m6">
+          <input type="checkbox" checked="{{userSelectedVisibleOrDefault name default}}" class="toggle-checked" id="column_{{name}}"/>
+          <label for="column_{{name}}">{{display_name}}</label>
+        </div>
+      {{/each}}
+    </div>
+    </div>
+    <div class="modal-footer">
+      <a href="" class="modal-action modal-close btn-flat save_columns">Save</a>
+      <a href="#!" class="modal-action modal-close btn-flat ">Cancel</a>
+
+    </div>
+  </div>
+</template>

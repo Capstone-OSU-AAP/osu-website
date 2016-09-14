@@ -1,0 +1,30 @@
+
+
+.background.accounts_background {
+  /*height: 70vh;*/
+  background-image:url(accounts.jpeg);
+  padding: 10%;
+}
+
+.accounts {
+  max-width: 500px;
+  margin: auto;
+}
+
+.accounts.card {
+  background-color: rgba(255,255,255,0.8)
+}
+/*.background, .blur {
+  background-image: url('/media/freelancer-desk.jpg');
+  background-repeat: no-repeat;
+  background-size: 1080px auto;
+}*/
+
+/*#bg {
+  background-position: center top;
+  padding: 70px 90px 120px 90px;
+}*/
+
+#search-container {
+  position: relative;
+}

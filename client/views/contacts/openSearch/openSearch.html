@@ -1,0 +1,15 @@
+<template name="modal_open">
+  <div id="open" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Open Search</h4>
+      <ul>
+      {{#each getUserSearches}}
+        <li><a href="#" id="{{this._id}}" class="open_search">{{this.quickSearchName}}</a></li>
+      {{/each}}
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close btn-flat ">Cancel</a>
+    </div>
+  </div>
+</template>

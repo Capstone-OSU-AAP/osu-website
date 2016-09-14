@@ -1,0 +1,14 @@
+.staff.icon-block {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  padding: 10px;
+  /*border-radius: 100px;*/
+  border-style: solid;
+  color: black;
+}
+
+
+.staff.icon-block:hover{
+  background-color: #D3D3D3;
+}

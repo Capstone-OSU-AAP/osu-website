@@ -1,0 +1,103 @@
+
+<template name="main">
+  <header>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>Automotive English Program</title>
+  </header>
+
+
+  <body>
+    <!-- <div class="background"></div> -->
+    {{> header}}
+    {{> yield}}
+    {{> footer}}
+
+  </body>
+
+</template>
+
+
+<template name="header">
+  <div id="nav_container">
+    <div id="nav_bar">{{> navbar }}</div>
+    {{> flashMessages}}
+  </div>
+</template>
+
+<template name="navbar">
+  <nav class="nav-bar-color" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/"><img class="brand-logo" src="logo.png"></a>
+
+      <ul class="right hide-on-med-and-down">
+        <!-- <li><a href="#">Donate</a></li> -->
+        <li><a href="/message">Message</a></li>
+        <li><a href="/contactus">Contact Us</a></li>
+        <li><a href="/about">About</a></li>
+
+
+        <li><a href="/tools">Tools</a></li>
+        <!-- <li><a href="#">Join us</a></li> -->
+        <li><a href="#">Campaigns</a></li>
+        {{#if currentUser}}
+          <li><a href="/staff">Profile</a></li>
+          <li><a href="/accounts"><i class="mdi-action-account-circle"></i></a></li>
+        {{else}}
+            <!-- {{> register}} -->
+            <li><a href="/accounts">Sign in</a></li>
+        {{/if}}
+
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <!-- <li><a href="#">Donate</a></li> -->
+        <li><a href="#">Message</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Tools</a></li>
+        <li><a href="#">Lessons</a></li>
+        <li><a href="#">Campaigns</a></li>
+        <li><a href="#"><i class="mdi-action-account-circle"></i></a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </div>
+  </nav>
+</template>
+
+<template name="footer">
+  <footer class="page-footer ee-yellow">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About Automotive English Program</h5>
+          <p class="grey-text text-lighten-4">
+           The Automotive English Program is an online English language training program that exclusively serves Honda of North America (HNA). HNA put forward an RFP for such a program in November of 2013 and awarded a contract to OSU in April of 2014.</p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Contacts</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Levon Nie</a></li>
+            <li><a class="white-text" href="#!">Keesern Chua</a></li>
+            <li><a class="white-text" href="#!">Xiakan Xu</a></li>
+            <li><a class="white-text" href="#!">Yupeng Zou</a></li>
+            <li><a class="white-text" href="#!">Shaoguang Zhao</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="red-text text-lighten-3" href="http://www.osu.edu">Ohio State University</a>
+      </div>
+    </div>
+  </footer>
+</template>

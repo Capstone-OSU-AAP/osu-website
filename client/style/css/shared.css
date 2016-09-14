@@ -1,0 +1,25 @@
+.frosted {
+  /*position: relative;
+  overflow: hidden;
+  max-height: 400px;
+  margin: auto;//$element-top-margin 0 $element-bottom-margin 0;*/
+  background-color: #D3D3D3;
+  /*border-radius: 2px;
+  @extend .z-depth-1;*/
+
+}
+
+
+.background {
+  margin: 0px;
+  width: 100%;
+  padding: 20px;
+  min-height: 70vh;
+  background-size: cover;
+}
+
+a:hover
+{
+  text-decoration:none;
+  color:teal;
+}

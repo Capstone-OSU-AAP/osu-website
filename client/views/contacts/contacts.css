@@ -1,0 +1,53 @@
+.contacts.section {
+  background-color: rgba(255,255,255,0.7)
+}
+
+.contacts.container {
+  margin: 10px;
+}
+
+.contacts i {
+  font-size: 20px;
+}
+
+.contacts.collapsible {
+  /*border: none;*/
+  /*box-shadow: none;*/
+}
+.contacts.collapsible-header {
+  background-color: transparent;
+  color: teal;
+}
+
+.contacts.collapsible-body {
+  /*background-color: teal;*/
+}
+
+.contacts.collapsible-header.active {
+  /*color: white;*/
+  font-size: 30px;
+  border: none;
+  /*background-color: teal;*/
+}
+
+.contacts.collapsible-header:hover {
+  background-color: rgba(38,166,154, .5);
+}
+
+.quick_search {
+  padding-left: 30px;
+  width: 50%;
+}
+
+.menu_button {
+  font-size: 15px;
+  width: 140px;
+}
+
+.buttons_menu {
+  float: right;
+}
+
+.modal-fixed-footer.save {
+  max-height: 300px;
+}

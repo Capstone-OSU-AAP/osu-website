@@ -1,0 +1,45 @@
+.tool-img {
+    display: block;
+    /*max-width:230px;
+    max-height:95px;*/
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+.tool-card-panel{
+  margin: 0px;
+
+}
+
+.tool-card-content{
+  height : 70px;
+  padding-left: 18px;
+}
+
+.tool-card-title {
+
+  font-size: 22px;
+
+}
+
+.tool-border{
+  border-color: #FFF;
+  border-style: solid;
+  border-spacing: 4px;
+}
+
+.tool-img4{
+  min-height: 20px;
+  margin-bottom: 20px;
+  background-color: #FFF;
+  border: 1px;
+  border-style: solid;
+  border-color: #ededed;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.tool-btn{
+  font-size: 10px;
+
+}

@@ -1,0 +1,80 @@
+<template name="home">
+  <div id="nav_slider">{{> slider}}</div>
+
+  <div class="container">
+    <div class="section">
+      <!--   Stats Section   -->
+      <h2> Welcome! </h2>
+        <p> Demo for Automotive English Program</p>
+      </div>
+    </div>
+    <div class="section">
+      {{#each articles}}
+        {{> article}}
+      {{/each}}
+      <!-- Article Summary Section -->
+    </div>
+  
+</template>
+
+<template name="article">
+  <div class="row">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="http://equaleducation.org.za{{this.mainpic}}">
+              <span class="card-title">
+                <p>{{getDateFromTimeStamp this.start_date}}</p>
+                <p>{{this.title}}</p>
+              </span>
+            </div>
+            <div class="card-content">
+              <p>{{this.blurb}}</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</template>
+
+
+<template name="slider">
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="background1.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3 class="textOverImage">Coming Soon</h3>
+          <!-- <h5 class="light grey-text text-lighten-3">Equal Education is a movement of learners, parents, teachers and community members working for quality and equality in South African education, through analysis and activism.</h5> -->
+        </div>
+      </li>
+      <li>
+        <img src="background2.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Read more about our Program</h3>
+
+          <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
+        </div>
+      </li>
+      <li>
+        <img src="background3.jpg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Cooperating with Honda North American</h3>
+
+          <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
+        </div>
+      </li>
+      <!-- <li>
+        <img src="http://lorempixel.com/580/250/nature/4">
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li> -->
+    </ul>
+  </div>
+
+</template>
